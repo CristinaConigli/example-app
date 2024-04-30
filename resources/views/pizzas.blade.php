@@ -1,32 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.layout')
+@section('content')
+    <div class="justify-center text-center">
+        
 
-        <title>Gatti</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        <style>
-            *{
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-            }
-        </style>
-    </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div style="background-color: black;">
-            <h1 style="color: #fff;"> Cat List</h1>
-        </div>
-        <div>
+        <div  style="text-align: center;" >
             
-            
-
-            @for( $i=0;  $i<count($pizzas) ;  $i++)
-            <p> {{$pizzas[$i]['type']}}</p>
-            @endfor
+                <h1 class="title">
+                    The best pizza in town
+                </h1>
+                <br><br><br>
+                <img style="width: 200px; height: 200px; margin: 0 auto;" src="/img/pizza.jpg" alt="logo">
+                <br><br><br>
+               <p>{{$name}}</p> 
+               <p>{{$age}}</p> 
         </div>
-    </body>
+    </div>
+@endsection
